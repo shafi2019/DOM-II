@@ -27,5 +27,22 @@ button.forEach((element) => {
 
 });
 
+const imgEvent = document.querySelectorAll('p');
+imgEvent.forEach((element) => {
+    element.addEventListener('mousedown', (event) => {
+        event.target.style.border = '5px solid lightgray';
+        event.target.style.transform = 'scale(1.5)';
+        event.target.style.color = 'brown';
+    })
+    element.addEventListener('mouseup', (event) => {
+        event.target.style.border = '';
+        event.target.style.transform = '';
+        event.target.style.color = '';
+    })
+});
+
+
+
+
 
 
