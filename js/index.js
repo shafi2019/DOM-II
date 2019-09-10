@@ -40,9 +40,35 @@ imgEvent.forEach((element) => {
         event.target.style.color = '';
     })
 });
-
-
-
-
+const body = document.querySelector('body');
+body.addEventListener('wheel', function alertMeOnce(){
+    alert("Wheeeeeeeeeellll!!!!!!!");
+    body.removeEventListener('wheel', alertMeOnce);
+});
+const h2El = document.querySelectorAll('h2');
+h2El.forEach((element) => {
+    window.addEventListener('load', () => {
+        element.style.color = 'green';
+    });
+})
+const imgEs = document.querySelectorAll('img');
+imgEs.forEach((element) => {
+    element.addEventListener('click', () => {
+        element.style.transform = 'scale(1.9)';
+        element.style.transition = 'transform 0.9s';
+        element.style.border = '2px solid lightgray'
+    });
+    element.addEventListener('dblclick', () => {
+        element.style.transform = '';
+        element.style.border = ''
+    });
+    
+})
+const p = document.querySelectorAll('p');
+    	p.forEach((paragraph) => {
+    paragraph.addEventListener('copy', event =>{
+        alert('DO NO COPY!');
+    }) 
+})
 
 
