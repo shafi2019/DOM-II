@@ -51,6 +51,7 @@ h2El.forEach((element) => {
         element.style.color = 'green';
     });
 })
+
 const imgEs = document.querySelectorAll('img');
 imgEs.forEach((element) => {
     element.addEventListener('click', () => {
@@ -64,6 +65,7 @@ imgEs.forEach((element) => {
     });
     
 })
+
 const p = document.querySelectorAll('p');
     	p.forEach((paragraph) => {
     paragraph.addEventListener('copy', event =>{
@@ -75,7 +77,6 @@ window.addEventListener('scroll', () => {
     const navA = document.querySelectorAll('.nav a');
     const mainNav = document.querySelector('.main-navigation');
     
-
     if (window.pageYOffset > 0) {
         navLogo.style.fontSize = '3rem';
         mainNav.style.color = 'white';
@@ -90,4 +91,11 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
+const preventA = document.querySelectorAll("a");
+preventA.forEach((a) => {
+    a.addEventListener("click", function(event) {
+      alert('Its broken')
+      event.preventDefault();
+      event.stopPropagation();
+    });
+});
